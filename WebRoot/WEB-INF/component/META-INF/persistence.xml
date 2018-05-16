@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+      <persistence-unit name="postgres">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>  
+                  <property name="hibernate.connection.username" value="postgres"/>  
+                  <property name="hibernate.connection.password" value="postgres"/>  
+                  <property name="hibernate.connection.url" value="jdbc:postgresql://178.16.32.21:9999/test"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="gbdclient">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="root"/>  
+                  <property name="hibernate.connection.password" value="root"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://178.16.32.11:3306/gbdclient?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="postgres_wdata">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>  
+                  <property name="hibernate.connection.username" value="postgres"/>  
+                  <property name="hibernate.connection.password" value="postgres"/>  
+                  <property name="hibernate.connection.url" value="jdbc:postgresql://178.16.32.21:9999/wdata"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="postgres_test">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>  
+                  <property name="hibernate.connection.username" value="postgres"/>  
+                  <property name="hibernate.connection.password" value="postgres"/>  
+                  <property name="hibernate.connection.url" value="jdbc:postgresql://178.16.32.21:9999/test"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="30">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="root"/>  
+                  <property name="hibernate.connection.password" value="abc123"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://172.18.100.30:3306/cxmf?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="CS_GXK">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>  
+                  <property name="hibernate.connection.username" value="postgres"/>  
+                  <property name="hibernate.connection.password" value="postgres"/>  
+                  <property name="hibernate.connection.url" value="jdbc:postgresql://172.18.210.6:5432/postgres"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="CS_JCK">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="root"/>  
+                  <property name="hibernate.connection.password" value="admin"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://172.18.100.39:3306/chengdugbd?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="JCK">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="root"/>  
+                  <property name="hibernate.connection.password" value="abc123"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://172.18.100.30:3306/chengdugbd?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="GXK">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>  
+                  <property name="hibernate.connection.username" value="postgres"/>  
+                  <property name="hibernate.connection.password" value="postgres"/>  
+                  <property name="hibernate.connection.url" value="jdbc:postgresql://172.18.210.6:5432/postgres"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="KFK">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>  
+                  <property name="hibernate.connection.username" value="postgres"/>  
+                  <property name="hibernate.connection.password" value="postgres"/>  
+                  <property name="hibernate.connection.url" value="jdbc:postgresql://178.16.32.26:9999/postgres"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="KFJCK">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="root"/>  
+                  <property name="hibernate.connection.password" value="root"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://178.16.32.17:3306/chengdupbd?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="chengdupbd">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="root"/>  
+                  <property name="hibernate.connection.password" value="root"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://178.16.32.17:3306/chengdupbd?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="LogDb">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>  
+                  <property name="hibernate.connection.username" value="postgres"/>  
+                  <property name="hibernate.connection.password" value="postgres"/>  
+                  <property name="hibernate.connection.url" value="jdbc:postgresql://172.18.210.4:5432/postgres"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="SSOAX">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>  
+                  <property name="hibernate.connection.username" value="SSOA1"/>  
+                  <property name="hibernate.connection.password" value="SSOA1"/>  
+                  <property name="hibernate.connection.url" value="jdbc:oracle:thin:@172.18.150.41:1521:orcl"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 'x' from dual"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="meteobasicbd">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="root"/>  
+                  <property name="hibernate.connection.password" value="admin"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://172.18.100.39:3306/nx_meteobasicbd2?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="sms_server">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="root"/>  
+                  <property name="hibernate.connection.password" value="admin"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://172.18.100.39:3306/sms_server?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="PMCIS_SERVER">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>  
+                  <property name="hibernate.connection.username" value="PMCIS"/>  
+                  <property name="hibernate.connection.password" value="PMCIS"/>  
+                  <property name="hibernate.connection.url" value="jdbc:oracle:thin:@172.18.100.30:1521:orcl"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 'x' from dual"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="PMCIS_MYSQL_SERVER">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="pmcis"/>  
+                  <property name="hibernate.connection.password" value="pmcis"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://172.18.100.39:3306/pmcis?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="JRK">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="pmcis"/>  
+                  <property name="hibernate.connection.password" value="pmcis"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://172.18.100.39:3306/pmcis?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="pmcis_mysql_local">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="root"/>  
+                  <property name="hibernate.connection.password" value="root"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/pmcis?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="pmcis_guanglaoshi">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="root"/>  
+                  <property name="hibernate.connection.password" value="admin"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://172.18.0.58:3306/pmcis?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="analysis_report">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="report"/>  
+                  <property name="hibernate.connection.password" value="report"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://172.18.100.39:3306/analysis_report?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="nngr_server">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="nngr"/>  
+                  <property name="hibernate.connection.password" value="nngr"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://172.18.210.10:3306/nngr?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/>  
+                  <property name="defaultDatabase" value="true"/>
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="mdm_base_server">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="mdm_base"/>  
+                  <property name="hibernate.connection.password" value="mdm_base"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://172.18.100.39:3306/mdm?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="oper_monit_server">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="root"/>  
+                  <property name="hibernate.connection.password" value="admin"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://172.18.210.10:3306/oper_monit?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+      <persistence-unit name="nngr_user">
+            <properties> 
+                  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>  
+                  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+                  <property name="hibernate.connection.username" value="nngr"/>  
+                  <property name="hibernate.connection.password" value="nngr"/>  
+                  <property name="hibernate.connection.url" value="jdbc:mysql://10.178.12.165:3306/nngr?useUnicode=true&amp;characterEncoding=UTF-8"/>  
+                  <property name="hibernate.connection.provider_class" value="com.sunsheen.jfids.system.base.datasource.DruidConnectionProvider"/>  
+                  <property name="hibernate.connection.filters" value="format,log4j,stat"/>  
+                  <property name="hibernate.connection.maxActive" value="20"/>  
+                  <property name="hibernate.connection.initialSize" value="1"/>  
+                  <property name="hibernate.connection.maxWait" value="60000"/>  
+                  <property name="hibernate.connection.minIdle" value="1"/>  
+                  <property name="hibernate.connection.timeBetweenEvictionRunsMillis" value="3000"/>  
+                  <property name="hibernate.connection.minEvictableIdleTimeMillis" value="300000"/>  
+                  <property name="hibernate.connection.validationQuery" value="SELECT 1"/>  
+                  <property name="hibernate.connection.testWhileIdle" value="true"/>  
+                  <property name="hibernate.connection.testOnBorrow" value="false"/>  
+                  <property name="hibernate.connection.testOnReturn" value="false"/>  
+                  <property name="hibernate.connection.poolPreparedStatements" value="true"/>  
+                  <property name="hibernate.connection.maxPoolPreparedStatementPerConnectionSize" value="20"/>  
+                  <property name="hibernate.show_sql" value="true"/>  
+                  <property name="hibernate.format_sql" value="false"/>  
+                  <property name="hibernate.max_fetch_depth" value="1"/>  
+                  <property name="hibernate.jdbc.batch_versioned_data" value="true"/>  
+                  <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>  
+                  <property name="hibernate.cache.region_prefix" value="hibernate.test"/>  
+                  <property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider"/>  
+                  <property name="hibernate.current_session_context_class" value="thread"/> 
+            </properties>
+      </persistence-unit>
+</persistence>

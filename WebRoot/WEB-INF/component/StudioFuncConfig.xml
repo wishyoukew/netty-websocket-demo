@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+      <node id="WebSocket" text="WebSocket" name="WebSocket" url="" iconcls="ctrl_book_open_png"/>
+      <node id="WebSocket_WebSocketNetty" belongto="WebSocket" text="netty实现的websocket" name="WebSocketNetty" url="" iconcls="app_monitor_png"/>
+      <node id="WebSocket_WebSocketNetty_Netty" belongto="WebSocket_WebSocketNetty" text="netty例子" name="Netty" url="" iconcls="app_application_side_boxes_png"/>
+</config>

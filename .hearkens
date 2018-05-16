@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<hearkenProject>
+      <projectKey>$WebSocket</projectKey>
+      <projectVersion>4</projectVersion>
+      <attributes>
+            <attribute name="databaseBookmark" value="nngr_server"/>
+      </attributes>
+</hearkenProject>
